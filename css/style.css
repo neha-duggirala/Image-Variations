@@ -1,0 +1,196 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+body {
+  background: #ffe98a !important;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  right: 50%;
+  /*bottom: 50%;*/
+  width: 600px;
+  height: auto;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 0.5rem 0.5rem 2rem #930077;
+  overflow: hidden;
+  background: #930077;
+  color: #005792;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: row;
+}
+
+.frame .pic {
+  padding: 1%;
+}
+
+.pic {
+  -webkit-animation: 1s appear;
+          animation: 1s appear;
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.pic-1 {
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+  -webkit-transform-origin: -9% -9%;
+          transform-origin: -9% -9%;
+}
+
+.pic-2 {
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+  -webkit-transform-origin: 50% -9%;
+          transform-origin: 50% -9%;
+}
+
+.pic-3 {
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+  -webkit-transform-origin: 109% -9%;
+          transform-origin: 109% -9%;
+}
+
+.pic-4 {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  -webkit-transform-origin: -9% 50%;
+          transform-origin: -9% 50%;
+}
+
+.pic-5 {
+  -webkit-animation-delay: .6s;
+          animation-delay: .6s;
+}
+
+.pic-6 {
+  -webkit-animation-delay: .7s;
+          animation-delay: .7s;
+  -webkit-transform-origin: 109% 50%;
+          transform-origin: 109% 50%;
+}
+
+.pic-7 {
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+  -webkit-transform-origin: -9% 109%;
+          transform-origin: -9% 109%;
+}
+
+.pic-8 {
+  -webkit-animation-delay: .9s;
+          animation-delay: .9s;
+  -webkit-transform-origin: 50% 109%;
+          transform-origin: 50% 109%;
+}
+
+.pic-9 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-transform-origin: 109% 109%;
+          transform-origin: 109% 109%;
+}
+
+.pic img {
+  width: 100%;
+  height: 100%;
+  /*-webkit-filter: saturate(0) contrast(125%);*/
+          /*filter: saturate(0) contrast(125%);*/
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: #e61c5d;
+  opacity: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay i {
+  color: white;
+  font-size: 200%;
+  -webkit-animation: pulsing 1s infinite;
+          animation: pulsing 1s infinite;
+}
+
+@-webkit-keyframes pulsing {
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes pulsing {
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+.pic {
+  overflow: hidden;
+}
+.pic:hover {
+  cursor: pointer;
+}
+.pic:hover .overlay {
+  left: 2%;
+  top: 2%;
+  width: 95%;
+  height: 95%;
+  opacity: 0.5;
+  transition: .3s ease-out;
+}
+
+.active {
+  transition: .5s ease-out;
+  -webkit-transform: scale(2.7);
+          transform: scale(2.7);
+  z-index: 2000;
+}
+.active img {
+  transition: .5s ease-in;
+  box-shadow: 0 0 1rem 1rem white;
+}
+.active .overlay {
+  display: none;
+}
+
+.backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.underlay {
+  background-color: #e61c5d;
+  transition: .5s;
+  z-index: 1;
+}

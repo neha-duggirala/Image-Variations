@@ -1,0 +1,143 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+body {
+	background: #000 !important;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+$main-color: #FF1EAD;
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: .5rem .5rem 2rem fade-out(#FF1EAD, .5);
+	overflow: hidden;
+  background: #FF1EAD;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: flex;
+	flex-direction: row;
+}
+.frame .pic {
+	padding: 1%;
+}
+.pic {
+	animation: 1s appear;
+}
+@keyframes appear {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.pic-1 {
+	animation-delay: .2s;
+	transform-origin: -9% -9%;
+}
+.pic-2 {
+	animation-delay: .3s;
+	transform-origin: 50% -9%;
+}
+.pic-3 {
+	animation-delay: .4s;
+	transform-origin: 109% -9%;
+}
+.pic-4 {
+	animation-delay: .5s;
+	transform-origin: -9% 50%;
+}
+.pic-5 {
+	animation-delay: .6s;
+}
+.pic-6 {
+	animation-delay: .7s;
+	transform-origin: 109% 50%;
+}
+.pic-7 {
+	animation-delay: .8s;
+	transform-origin: -9% 109%;
+}
+.pic-8 {
+	animation-delay: .9s;
+	transform-origin: 50% 109%;
+}
+.pic-9 {
+	animation-delay: 1s;
+	transform-origin: 109% 109%;
+}
+.pic img {
+	width: 100%;
+	height: 100%;
+	filter: saturate(0) contrast(125%);
+}
+.overlay {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	background-color: fade-out($main-color, .5);
+	opacity: 0;
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	i {
+		color: white;
+		font-size: 200%;
+		animation: pulsing 1s infinite;
+	}
+}
+@keyframes pulsing {
+	50% {
+		transform: scale(1.1);
+	}
+}
+.pic {
+	overflow: hidden;
+	&:hover {
+		cursor: pointer;
+		.overlay {
+			left: 2%;
+			top: 2%;
+			width: 95%;
+			height: 95%;
+			opacity: 1;
+			transition: .3s ease-out;
+		}
+	}
+}
+.active {
+	transition: .5s ease-out;
+	transform: scale(2.7);
+	img {
+		transition: .5s ease-in;
+		box-shadow: 0 0 1rem 1rem white;
+	}
+	z-index: 2000;
+	.overlay {
+		display: none;
+	}
+}
+.backdrop {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.underlay {
+	background-color: $main-color;
+	transition: .5s;
+	z-index: 1;
+}
+
