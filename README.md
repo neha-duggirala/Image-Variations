@@ -1,4 +1,4 @@
-# Image-Variations
+**Image-Variations**
 </br>
 # Packages Used
 </br>
@@ -9,6 +9,7 @@ imutils
 
 </br>
 # About the packages
+</br>
 ***Opencv2:***
 </br>
 ![](https://www.google.com/imgres?imgurl=https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/OpenCV_Logo_with_text_svg_version.svg/180px-OpenCV_Logo_with_text_svg_version.svg.png&imgrefurl=https://en.wikipedia.org/wiki/OpenCV&h=222&w=180&tbnid=ike73pihCumi0M:&q=opencv&tbnh=160&tbnw=129&usg=AI4_-kRIjzijC9qKiDYygOm7gpWMijhY8w&vet=12ahUKEwjJ6vysw4TgAhXKF3IKHf9yCsIQ_B0wFXoECAMQEQ..i&docid=4jtp2k0WaLuvTM&itg=1&sa=X&ved=2ahUKEwjJ6vysw4TgAhXKF3IKHf9yCsIQ_B0wFXoECAMQEQ)
