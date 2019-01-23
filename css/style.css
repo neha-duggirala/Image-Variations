@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
 body {
-  background: #ffe98a !important;
+  background: #000 !important;
 }
 
 .frame {
@@ -14,9 +14,9 @@ body {
   margin-top: -200px;
   margin-left: -200px;
   border-radius: 2px;
-  box-shadow: 0.5rem 0.5rem 2rem #930077;
+  box-shadow: 0.5rem 0.5rem 2rem #9036D4;
   overflow: hidden;
-  background: #930077;
+  background: #FFE000;
   color: #005792;
   font-family: 'Open Sans', Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -125,7 +125,7 @@ body {
   left: 50%;
   width: 0;
   height: 0;
-  background-color: #e61c5d;
+  background-color: #000;
   opacity: 0;
   z-index: 1000;
   display: flex;
@@ -190,7 +190,7 @@ body {
 }
 
 .underlay {
-  background-color: #e61c5d;
+  background-color: #9036D4;
   transition: .5s;
   z-index: 1;
 }
